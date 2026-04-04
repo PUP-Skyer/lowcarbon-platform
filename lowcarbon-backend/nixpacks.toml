@@ -1,0 +1,14 @@
+{
+  "providers": ["java"],
+  "phases": {
+    "install": {
+      "commands": ["mvn clean package -DskipTests"]
+    },
+    "build": {
+      "commands": []
+    },
+    "start": {
+      "commands": ["java -jar target/lowcarbon-backend-1.0.0.jar"]
+    }
+  }
+}
