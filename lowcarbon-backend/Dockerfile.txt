@@ -1,8 +1,0 @@
-FROM maven:3.8-openjdk-11-slim
-WORKDIR /app
-COPY pom.xml .
-RUN mvn dependency:go-offline -B
-COPY src ./src
-RUN mvn package -DskipTests -B
-EXPOSE 8080
-CMD ["java","-jar","target/lowcarbon-backend-1.0.0.jar"]
